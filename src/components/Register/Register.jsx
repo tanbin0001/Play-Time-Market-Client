@@ -80,7 +80,7 @@ const Register = () => {
                     <h1 className="text-5xl font-bold">Register Now</h1>
 
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-red-400">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-customBlue">
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -106,11 +106,11 @@ const Register = () => {
                             </label>
                             <input type="password" name='password' placeholder="password" className="input input-bordered" />
                             <label className="label">
-                                <Link to='/login' className="label-text-alt link link-hover text-red-500">Already have an account? Please Login!</Link>
+                                <Link to='/login' className="label-text-alt link link-hover text-customBlue">Already have an account? Please Login!</Link>
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-red-500">Register</button>
+                            <button className="btn bg-customBlue">Register</button>
 
                         </div>
                     </form>
