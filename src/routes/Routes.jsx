@@ -7,6 +7,7 @@ import ToyDetails from "../components/ToyDetails/ToyDetails";
 import PrivateRouter from "../PrivateRoute/PrivateRoute";
 import AddToy from "../components/AddToy/AddToy";
 import AllToys from "../components/AllToys/AllToys";
+import SingleToyDetails from "../components/SingleToyDetails/SingleToyDetails";
 
 export const router = createBrowserRouter([
     {
@@ -19,7 +20,7 @@ export const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/allToys/toyDetails/:id',
+                path: '/toyDetails/:id',
                 element: <PrivateRouter><ToyDetails></ToyDetails></PrivateRouter>
 
             },
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
             {
                 path: '/allToys',
                 element: <AllToys></AllToys>
+            },
+            {
+                path: '/allToys/toysDetails/:id',
+                element: <SingleToyDetails></SingleToyDetails>
             }
             ,
             {

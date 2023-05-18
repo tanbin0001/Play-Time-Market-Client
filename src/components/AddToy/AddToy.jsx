@@ -14,11 +14,11 @@ const AddToy = () => {
         const rating = form.rating.value;
         const available_quantity = form.available_quantity.value;
         const image = form.image.value;
-        const description = form.description.value;
+        const toy_description = form.description.value;
         const subCategory = form.subCategory.value;
 
         const newToy = {
-            name, price, description, image, seller_email, seller_name, rating, available_quantity, subCategory
+            name, price, toy_description, image, seller_email, seller_name, rating, available_quantity, subCategory
         }
 
         console.log(newToy);
