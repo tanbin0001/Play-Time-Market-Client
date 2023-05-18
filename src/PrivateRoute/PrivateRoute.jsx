@@ -4,6 +4,7 @@ import { useContext } from "react";
 
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProviders";
+import Spinner from "../shared/Spinner/Spinner";
 
 const PrivateRouter = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
@@ -11,7 +12,12 @@ const PrivateRouter = ({ children }) => {
 
     console.log(location);
     if (loading) {
-        return <div className=" flex justify-center mt-96"><progress className="progress w-56  "></progress></div>
+        return (
+            <Spinner></Spinner>
+        );
+
+
+        {/* <div className=" flex justify-center mt-96"><progress className="progress w-56  "></progress></div> */ }
     }
     if (user) {
         return children;

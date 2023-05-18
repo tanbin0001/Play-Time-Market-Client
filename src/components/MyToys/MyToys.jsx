@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
 import { Link } from 'react-router-dom';
-import UpdateToy from '../UpdateToy/UpdateToy';
+import Spinner from '../../shared/Spinner/Spinner';
 
 import Swal from 'sweetalert2';
 
@@ -16,7 +16,11 @@ const MyToys = () => {
             .then(data => setMyToys(data))
 
     }, [url, myToys]);
-
+    if (myToys.length === 0) {
+        return (
+            <Spinner></Spinner>
+        );
+    }
     const handleDelete = id => {
         Swal.fire({
             imageUrl: 'https://68.media.tumblr.com/b3e482dc5046a497ad526a423e26c4e3/tumblr_otmbl0ffWh1ud1moyo1_500.gif',

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Spinner from '../../shared/Spinner/Spinner';
 
 const AllToys = () => {
     const [addedToys, setAddedToys] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
-      
+
         fetch(`http://localhost:5000/addNewToys?limit=20&search=${searchQuery}`)
             .then(res => res.json())
             .then(data => {
@@ -16,6 +17,11 @@ const AllToys = () => {
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
     };
+    if (addedToys.length === 0) {
+        return (
+            <Spinner></Spinner>
+        );
+    }
     return (
         <div className=' mt-10'>
             <div className='flex justify-center'>

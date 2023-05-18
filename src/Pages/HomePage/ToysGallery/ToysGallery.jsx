@@ -1,11 +1,14 @@
-import React from 'react';
+import Marquee from "react-fast-marquee";
 
 const ToysGallery = () => {
     return (
+
         <div className='my-10 '>
             <h1 className='text-center font-extrabold  mb-5 text-3xl'>Toys Gallery</h1>
+           
             <div class="grid grid-cols-4  ">
                 {/* image 1 */}
+
                 <div class="bg-gray-200">
                     <img src="https://files.catbox.moe/c3f59s.jpg" alt="Toy 1" class="w-full" />
                 </div>
@@ -39,6 +42,7 @@ const ToysGallery = () => {
                 </div>
 
             </div>
+            
 
         </div>
     );
