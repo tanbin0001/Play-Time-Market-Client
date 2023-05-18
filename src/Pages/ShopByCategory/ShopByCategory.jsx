@@ -10,8 +10,9 @@ const ShopByCategory = () => {
         fetch('http://localhost:5000/allToys')
             .then(res => res.json())
             .then(data => setToysData(data))
-            .catch(error => console.error('Error fetching data:', error));
+
     }, []);
+    console.log(toysData);
 
     return (
         <div>
@@ -26,9 +27,12 @@ const ShopByCategory = () => {
                             {category.subCategories.map((subCategory) => (
                                 <div className="pl-3" key={subCategory.name}>
                                     <h3>{subCategory.name}</h3>
-                                    <div className="flex justify-center mt-5 space-x-7">
+                                    <div className="grid grid-cols-2 mt-5">
                                         {subCategory.toys.map((toy) => (
-                                            <Toy key={toy.id} toy={toy} />
+                                            <Toy key={toy.id}
+                                                toyId={toy._id}
+
+                                                toy={toy} />
                                         ))}
                                     </div>
                                 </div>
