@@ -6,7 +6,7 @@ const AllToys = () => {
     const [searchQuery, setSearchQuery] = useState('');
 
     useEffect(() => {
-        /*     fetch('http://localhost:5000/addNewToys?limit=20') */
+      
         fetch(`http://localhost:5000/addNewToys?limit=20&search=${searchQuery}`)
             .then(res => res.json())
             .then(data => {

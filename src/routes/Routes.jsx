@@ -8,6 +8,8 @@ import PrivateRouter from "../PrivateRoute/PrivateRoute";
 import AddToy from "../components/AddToy/AddToy";
 import AllToys from "../components/AllToys/AllToys";
 import SingleToyDetails from "../components/SingleToyDetails/SingleToyDetails";
+import MyToys from "../components/MyToys/MyToys";
+import UpdateToy from "../components/UpdateToy/UpdateToy";
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +37,14 @@ export const router = createBrowserRouter([
             {
                 path: '/allToys/toysDetails/:id',
                 element: <SingleToyDetails></SingleToyDetails>
+            },
+            {
+                path: '/myToys',
+                element: <MyToys></MyToys>
+            },
+            {
+                path: '/updateToy/:id',
+                element: <UpdateToy></UpdateToy>
             }
             ,
             {
