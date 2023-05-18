@@ -8,7 +8,7 @@ const ToyDetails = () => {
     const [toysData, setToysData] = useState([]);
     const [singleToyData, setSingleToyData] = useState({});
     const { user } = useContext(AuthContext);
-    const { name, price, rating, image, toy_description, available_quantity } = singleToyData;
+    const { name, price, rating, image, toy_description, seller_name, seller_email, available_quantity } = singleToyData;
     const { id } = useParams();
     console.log(id);
 
@@ -46,8 +46,10 @@ const ToyDetails = () => {
                     <h2 className="card-title">Toy Name:  {name}</h2>
                     <p><span className="font-bold">Price:</span>  {price}</p>
                     <p><span className="font-bold">Rating:</span>  {rating}</p>
-                    {user && <p><span className="font-bold">Seller Name:</span>  {user.displayName}</p>}
-                    {user && <p><span className="font-bold">Seller Email:</span> {user.email}</p>}
+                    {/*  {user && <p><span className="font-bold">Seller Name:</span>  {user.displayName}</p>}
+                    {user && <p><span className="font-bold">Seller Email:</span> {user.email}</p>} */}
+                    <p>Seller Name: {seller_name}</p>
+                    <p>Seller Email: {seller_email}</p>
                     <p><span className="font-bold">Description: </span>  {toy_description}</p>
                     <p><span className="font-bold">Available Quantity:</span>  {available_quantity}</p>
                     <div className="card-actions justify-end">

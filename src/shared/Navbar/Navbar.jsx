@@ -47,7 +47,7 @@ const Navbar = () => {
                         user &&
                         <>
                             <li><NavLink to='/myToys' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>My Toys</NavLink></li>
-                            <li><NavLink to='/addToys' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>Add Toys</NavLink></li></>
+                            <li><NavLink to='/addToy' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>Add Toys</NavLink></li></>
                     }
                     <li><NavLink to='/blogs' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>Blogs</NavLink></li>
 
