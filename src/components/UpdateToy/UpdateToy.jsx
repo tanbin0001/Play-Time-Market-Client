@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
+import Swal from 'sweetalert2';
 
 const UpdateToy = () => {
     const { user } = useContext(AuthContext);
-    const [toy, setToy] = useState([])
-    console.log(toy);
+    const [toy, setToy] = useState({ name: '' });
+
     const { id } = useParams();
     useEffect(() => {
         fetch(`http://localhost:5000/updateToy/${id}`)
@@ -16,8 +17,50 @@ const UpdateToy = () => {
     }, [id]);
 
     const { name, rating, subCategory, image } = toy;
-    console.log(id);
 
+
+
+
+    const handleUpdateToy = event => {
+
+        event.preventDefault();
+
+        const form = event.target;
+        const price = form.price.value;
+        const available_quantity = form.available_quantity.value;
+
+        const toy_description = form.description.value;
+
+
+        const updatedToy = {
+            price, toy_description, available_quantity
+        }
+
+
+        //send data to the server
+        fetch(`http://localhost:5000/updateToys/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedToy)
+        })
+
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+        form.reset()
+        Swal.fire({
+
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+
+    }
     return (
         <div>
             <div>
@@ -28,7 +71,7 @@ const UpdateToy = () => {
 
                         </div>
                         <div className="card  w-full rounded-none  shadow-2xl bg-base-100">
-                            <form className="card-body">
+                            <form onSubmit={handleUpdateToy} className="card-body">
                                 <div className='flex justify-between space-x-5'>
                                     <div className="form-control">
                                         <label className="label">
@@ -94,8 +137,9 @@ const UpdateToy = () => {
 
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Update Toy</button>
+                                    <button type="submit" className="btn btn-primary">Update Toy</button>
                                 </div>
+
                             </form>
                         </div>
                     </div>
