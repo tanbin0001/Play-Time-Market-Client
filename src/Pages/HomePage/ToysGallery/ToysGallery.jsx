@@ -2,8 +2,8 @@ import React from 'react';
 
 const ToysGallery = () => {
     return (
-        <div className='my-20 '>
-            <h1 className='text-center'>Toys Gallery</h1>
+        <div className='my-10 '>
+            <h1 className='text-center font-extrabold  mb-5 text-3xl'>Toys Gallery</h1>
             <div class="grid grid-cols-4  ">
                 {/* image 1 */}
                 <div class="bg-gray-200">
