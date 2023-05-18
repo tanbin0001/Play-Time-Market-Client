@@ -41,22 +41,15 @@ const ToyDetails = () => {
         <div className='mt-10 mx-10'>
             <div className="card lg:card-side bg-base-100 shadow-xl rounded-none">
                 <figure><img src={image} className='w-80' alt="Album" /></figure>
-                {/*  <div className="card-body">
-                    <h2 className="card-title">Toy Name: {name}</h2>
-                    {user && <p>Seller Name: {user.displayName}</p>}
-                    {user && <p>Seller Email: {user.email}</p>}
-                    <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Listen</button>
-                    </div>
-                </div> */}
+
                 <div className="card-body  ">
-                    <h2 className="card-title">{name}</h2>
-                    <p>Price: {price}</p>
-                    <p>Rating: {rating}</p>
-                    {user && <p>Seller Name: {user.displayName}</p>}
-                    {user && <p>Seller Email: {user.email}</p>}
-                    <p>Description: {toy_description}</p>
-                    <p>Available Quantity: {available_quantity}</p>
+                    <h2 className="card-title">Toy Name:  {name}</h2>
+                    <p><span className="font-bold">Price:</span>  {price}</p>
+                    <p><span className="font-bold">Rating:</span>  {rating}</p>
+                    {user && <p><span className="font-bold">Seller Name:</span>  {user.displayName}</p>}
+                    {user && <p><span className="font-bold">Seller Email:</span> {user.email}</p>}
+                    <p><span className="font-bold">Description: </span>  {toy_description}</p>
+                    <p><span className="font-bold">Available Quantity:</span>  {available_quantity}</p>
                     <div className="card-actions justify-end">
                         <button className="btn btn-primary">Buy Now</button>
                     </div>
