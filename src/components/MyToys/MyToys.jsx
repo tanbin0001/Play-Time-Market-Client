@@ -3,6 +3,8 @@ import { AuthContext } from '../../AuthProvider/AuthProviders';
 import { Link } from 'react-router-dom';
 import UpdateToy from '../UpdateToy/UpdateToy';
 
+import Swal from 'sweetalert2';
+
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
@@ -13,7 +15,44 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => setMyToys(data))
 
-    }, [])
+    }, [url, myToys]);
+
+    const handleDelete = id => {
+        Swal.fire({
+            imageUrl: 'https://68.media.tumblr.com/b3e482dc5046a497ad526a423e26c4e3/tumblr_otmbl0ffWh1ud1moyo1_500.gif',
+            imageWidth: 400,
+            imageHeight: 200,
+            title: 'Are you sure?',
+            text: "Deleted toy won't be reverted!",
+            icon: 'warning',
+
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                fetch(`http://localhost:5000/myToys/${id}`, {
+                    method: 'DELETE',
+
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+
+                            Swal.fire(
+                                'Deleted!',
+                                'Your toy has been deleted.',
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
     return (
         <div>
             <div className="overflow-x-auto w-full">
