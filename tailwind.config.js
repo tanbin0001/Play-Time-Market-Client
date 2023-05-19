@@ -10,10 +10,11 @@ export default {
         customBlue: "#0c99bc",
       },
     },
+
     daisyui: {
       themes: ["dark"],
     },
-   
+
   },
   plugins: [require("daisyui")],
 };

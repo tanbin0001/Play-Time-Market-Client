@@ -14,15 +14,15 @@ const ToysGallery = () => {
                     </div>
                     {/* image 2 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/1huzw7.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/947f08b6-ce72-4e85-8736-a1db9baa9577" alt="Toy 1" class=" w-80" />
                     </div>
                     {/* image 3 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/ligqkj.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/4a57ea72-6646-4e76-bc67-001305350ca1" alt="Toy 1" class=" w-80" />
                     </div>
                     {/* image 4 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/typ0c4.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/dbe991fd-9374-4ee7-bac6-e5f53aa4d1d3" alt="Toy 1" class=" w-80" />
                     </div>
                     {/* image 5 */}
                     <div class="bg-gray-200">
@@ -30,7 +30,7 @@ const ToysGallery = () => {
                     </div>
                     {/* image 6 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/joa90y.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/b229cc14-2b54-4f97-b7bd-9fe6aa623067" alt="Toy 1" class=" w-80" />
                     </div>
                     {/* image 7 */}
                     <div class="bg-gray-200">
@@ -38,7 +38,7 @@ const ToysGallery = () => {
                     </div>
                     {/* image 8 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/ejv46y.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/7900fbea-1257-4aab-a2bb-c58027e34c18" alt="Toy 1" class=" w-80" />
                     </div>
 
 

@@ -77,10 +77,10 @@ const Register = () => {
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col ">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Register Now</h1>
+                    <h1 className="text-5xl font-bold dragonFont">Register Now</h1>
 
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-customBlue">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-lg bg-base-100 border border-blue-300 shadow-blue-400 ">
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -110,7 +110,7 @@ const Register = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-customBlue">Register</button>
+                            <button className="btn border border-blue-300 shadow-blue-400">Register</button>
 
                         </div>
                     </form>

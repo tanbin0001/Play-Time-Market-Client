@@ -17,8 +17,8 @@ const SingleToyDetails = () => {
 
     return (
         <div className='mt-10'>
-            <h1 className='my-5 text-center font-bold text-3xl'> {name}</h1>
-            <div className="card lg:card-side bg-base-100 rounded-none shadow-xl">
+            <h1 className='my-5 text-center font-bold text-3xl dragonFont '> {name}</h1>
+            <div className=" mb-20 card lg:card-side bg-base-100 rounded-none shadow-lg border border-blue-300 shadow-blue-400">
                 <figure><img src={image} className='w-80  ' alt="Album" /></figure>
                 <div className="card-body  ">
                     <h2 className="card-title">Toy Name:  {name}</h2>
