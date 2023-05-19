@@ -7,7 +7,7 @@ const Banner = () => {
 
             <div className="carousel    h-screen w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://files.catbox.moe/23zeq2.jpg" className="w-full  " />
+                    <img src="https://files.catbox.moe/ad4mpb.jpg" className="w-full  " />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
 
                     <div className="  absolute flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -26,7 +26,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="https://files.catbox.moe/df928h.jpg" className="w-full  " />
+                    <img src="https://files.catbox.moe/oe90g5.jpg" className="w-full  " />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="  absolute flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <div className="text-center space-y-5 mb-10">
@@ -44,7 +44,7 @@ const Banner = () => {
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="https://files.catbox.moe/co6eci.jpg" className="w-full" />
+                    <img src="https://files.catbox.moe/24jv5k.jpg" className="w-full" />
                     <div className="absolute inset-0 bg-black opacity-50"></div>
                     <div className="  absolute flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                         <div className="text-center space-y-5 mb-10">
@@ -58,7 +58,7 @@ const Banner = () => {
 
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide4" className="btn btn-circle">❯</a>
+                        <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
 
