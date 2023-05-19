@@ -26,22 +26,22 @@ const AllToys = () => {
         <div className=' mt-10'>
             <div className='flex justify-center'>
                 <div className='text-center '>
-                    <h1>All Toys Page</h1>
-                    <div className="form-control my-5">
+                    <h1 className='font-bold text-3xl mb-14 dragonFont  border-b-2    shadow-red-500 shadow-2xl border-red-500   '>All Toys Page</h1>
+                    <div className="form-control my-5  ">
                         <input type="text"
 
                             placeholder="Search by Toy Name"
                             value={searchQuery}
                             onChange={handleSearch}
-                            className="input input-bordered w-52" />
+                            className="input input-bordered w-52  border border-blue-300   shadow-blue-300 shadow-md" />
                     </div>
                 </div>
             </div>
             <div className="overflow-x-auto w-full">
 
-                <table className="table w-full">
+                <table className="table w-full ">
                     <thead>
-                        <tr>
+                        <tr className='border border-blue-300 shadow-lg  shadow-blue-300  '>
                             <th>Image</th>
                             <th>Seller</th>
                             <th>Toy Name</th>
@@ -52,29 +52,29 @@ const AllToys = () => {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='mt-8'>
                         {addedToys.map((toy, index) => (
                             <tr key={index}>
-                                <td>
+                                <td >
                                     <img src={toy.image} alt={toy.name} className="h-20 w-20  " />
                                 </td>
-                                <td>{toy.seller_name}</td>
-                                <td>{toy.name}</td>
-                                <td>{toy.subCategory}</td>
-                                <td>${toy.price}</td>
-                                <td>{toy.available_quantity}</td>
+                                <td >{toy.seller_name}</td>
+                                <td >{toy.name}</td>
+                                <td >{toy.subCategory}</td>
+                                <td >${toy.price}</td>
+                                <td >{toy.available_quantity}</td>
 
 
                                 <td>
                                     <Link to={`/allToys/toysDetails/${toy._id}`}>
-                                        <button className="btn ">View Details</button></Link>
+                                        <button className="btn border border-blue-300 shadow-md  shadow-blue-300 ">View Details</button></Link>
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
-        </div>
+        </div >
     );
 };
 

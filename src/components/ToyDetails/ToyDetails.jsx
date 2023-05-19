@@ -39,7 +39,7 @@ const ToyDetails = () => {
 
     return (
         <div className='mt-10 mx-10'>
-            <div className="card lg:card-side bg-base-100 shadow-xl rounded-none">
+            <div className="card lg:card-side bg-base-100   rounded-none border border-blue-300 shadow-lg  shadow-blue-300">
                 <figure><img src={image} className='w-80' alt="Album" /></figure>
 
                 <div className="card-body  ">
@@ -52,7 +52,7 @@ const ToyDetails = () => {
                     <p><span className="font-bold">Description: </span>  {toy_description}</p>
                     <p><span className="font-bold">Available Quantity:</span>  {available_quantity}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn border border-blue-300 shadow-md  shadow-blue-300">Buy Now</button>
                     </div>
 
                 </div>

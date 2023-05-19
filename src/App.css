@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Imported;
+  src: url("../public/fonts/DragonHunter-9Ynxj.otf");
+}
+
+.dragonFont {
+  font-family: Imported;
+}
