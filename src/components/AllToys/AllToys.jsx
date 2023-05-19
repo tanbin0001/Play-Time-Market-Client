@@ -6,24 +6,26 @@ const AllToys = () => {
     const [addedToys, setAddedToys] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
 
+
+
+
     useEffect(() => {
 
         fetch(`http://localhost:5000/addNewToys?limit=20&search=${searchQuery}`)
+
             .then(res => res.json())
             .then(data => {
                 setAddedToys(data);
+
+
             })
     }, [searchQuery]);
     const handleSearch = (e) => {
         setSearchQuery(e.target.value);
     };
-    if (addedToys.length === 0) {
-        return (
-            <Spinner></Spinner>
-        );
-    }
+
     return (
-        <div className=' mt-10'>
+        <div className=' mt-10 font-marcellus'>
             <div className='flex justify-center'>
                 <div className='text-center '>
                     <h1 className='font-bold text-3xl mb-14 dragonFont  border-b-2    shadow-red-500 shadow-2xl border-red-500   '>All Toys Page</h1>

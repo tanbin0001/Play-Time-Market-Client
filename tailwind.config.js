@@ -10,7 +10,9 @@ export default {
         customBlue: "#0c99bc",
       },
     },
-
+    fontFamily: {
+      'marcellus': ['"Marcellus"', 'serif'],
+    },
     daisyui: {
       themes: ["dark"],
     },

@@ -17,7 +17,7 @@ const Navbar = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div className="navbar text-white bg-black font-bold  mb-5    border border-blue-300 shadow-lg  shadow-blue-300">
+        <div className="navbar text-white bg-black font-bold  mb-5  font-marcellus   border border-blue-300 shadow-lg  shadow-blue-300">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -34,22 +34,22 @@ const Navbar = () => {
                         <li><Link to='/blogs'> Blogs</Link></li>
                     </ul>
                 </div>
-                <Link className="btn btn-ghost normal-case text-xl">
-                    <img className="w-14 " src="https://files.catbox.moe/yrn597.png " alt="" />
-                    <h1 className="  font-bold  ">Play Time Market</h1>
+                <Link className="btn btn-ghost normal-case lg:text-xl  animate-bounce">
+                    <img className="w-14 " src="https://files.catbox.moe/9criru.png" alt="" />
+                    <h1 className="   dragonFont pl-2">Play Time Market</h1>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 space-x-5">
-                    <li><NavLink to='/' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>Home</NavLink></li>
-                    <li><NavLink to='/allToys' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>All Toys</NavLink></li>
+                    <li><NavLink to='/' className={({ isActive }) => isActive ? 'bg-white text-black' : '       bg-black border-2 border-blue-500  '}>Home</NavLink></li>
+                    <li><NavLink to='/allToys' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-black border-2 border-blue-500  '}>All Toys</NavLink></li>
                     {
                         user &&
                         <>
-                            <li><NavLink to='/myToys' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>My Toys</NavLink></li>
-                            <li><NavLink to='/addToy' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>Add Toys</NavLink></li></>
+                            <li><NavLink to='/myToys' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-black border-2 border-blue-500  '}>My Toys</NavLink></li>
+                            <li><NavLink to='/addToy' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-black border-2 border-blue-500  '}>Add Toys</NavLink></li></>
                     }
-                    <li><NavLink to='/blogs' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-[#0c99bc]'}>Blogs</NavLink></li>
+                    <li><NavLink to='/blogs' className={({ isActive }) => isActive ? 'bg-white text-black' : 'bg-black  border-2 border-blue-500  '}>Blogs</NavLink></li>
 
                 </ul>
             </div>
@@ -64,8 +64,8 @@ const Navbar = () => {
                                     <img src={user?.photoURL} />
                                 </div>
                             </label>
-                            <button onClick={handleLogOut} className="btn btn-xs rounded-none bg-red-500 border-0  hover:bg-red-400  hover:border-white ">Sign Out</button>
-                        </> : <Link to='/login'> <button className="btn  bg-red-500 border-0  hover:bg-red-400  hover:border-white  ">Login</button></Link>
+                            <button onClick={handleLogOut} className="btn btn-xs rounded-none border-b-2    shadow-red-500 shadow-2xl border-red-500  hover:border-white ">Sign Out</button>
+                        </> : <Link to='/login'> <button className="btn   border-b-2    shadow-red-500 shadow-2xl border-red-500   hover:bg-red-400  hover:border-white  ">Login</button></Link>
                 }
             </div>
         </div>

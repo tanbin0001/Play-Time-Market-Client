@@ -59,7 +59,8 @@ const MyToys = () => {
     }
     return (
         <div>
-            <div className="overflow-x-auto w-full">
+            <h1 className='font-bold   text-3xl mb-14 dragonFont  border-b-2 w-[300px] mx-auto text-center  animate-pulse  shadow-red-500 shadow-2xl border-red-500   '>My Toys Page</h1>
+            <div className="overflow-x-auto w-full font-marcellus">
                 <table className="table w-full">
                     <thead>
                         <tr>
@@ -86,13 +87,13 @@ const MyToys = () => {
                                 <td className='text-center'>{myToy.available_quantity}</td>
                                 <td>
                                     <Link to={`/updateToy/${myToy._id}`}>
-                                        <button className="btn" myToys={myToys} >
+                                        <button className="btn border-b-2    shadow-blue-500 shadow-md border-blue-500  " myToys={myToys} >
                                             Update
                                         </button>
                                     </Link>
                                 </td>
                                 <td>
-                                    <button className="btn" onClick={() => handleDelete(myToy._id)}>
+                                    <button className="btn border-b-2    shadow-red-500 shadow-sm border-red-500  " onClick={() => handleDelete(myToy._id)}>
                                         Delete
                                     </button>
                                 </td>

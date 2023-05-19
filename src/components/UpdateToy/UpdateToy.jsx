@@ -67,10 +67,11 @@ const UpdateToy = () => {
                 <div className="hero min-h-screen bg-base-200">
                     <div className="hero-content flex-col  ">
                         <div className="text-center ">
-                            <h1 className="text-5xl font-bold">Update Toy</h1>
+                            < h1 className='font-bold   text-3xl mb-14 dragonFont  border-b-2 w-[300px] mx-auto text-center  animate-pulse  shadow-red-500 shadow-2xl border-red-500   '>Update toys</h1>
+
 
                         </div>
-                        <div className="card  w-full rounded-none  shadow-2xl bg-base-100">
+                        <div className="card   w-full rounded-none  bg-base-100 border    shadow-blue-500 shadow-lg border-blue-500  font-marcellus">
                             <form onSubmit={handleUpdateToy} className="card-body">
                                 <div className='flex justify-between space-x-5'>
                                     <div className="form-control">
@@ -137,7 +138,7 @@ const UpdateToy = () => {
 
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button type="submit" className="btn btn-primary">Update Toy</button>
+                                    <button type="submit" className="btn border    shadow-blue-500 shadow-sm border-blue-500">Update Toy</button>
                                 </div>
 
                             </form>

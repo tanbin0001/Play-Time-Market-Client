@@ -15,14 +15,13 @@ const Banner = () => {
 
                             <h3 className="font-hennypenny text-white   font-bold text-3xl">Fuel Your Adventured</h3>
                             <h1 className="   text-white text-4xl  dragonFont">Adventure Awaits: Find Your Favorite Action Toys Today</h1>
-                            <button className="btn btn-outline btn-warning">Travel Guide</button>
 
 
                         </div>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide3" className="btn btn-circle">❮</a>
-                        <a href="#slide2" className="btn btn-circle">❯</a>
+                        <a href="#slide3" className="btn btn-circle   border-b-2    shadow-red-500 shadow-2xl border-red-500  ">❮</a>
+                        <a href="#slide2" className="btn btn-circle   border-b-2    shadow-red-500 shadow-2xl border-red-500  ">❯</a>
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
@@ -33,14 +32,14 @@ const Banner = () => {
 
                             <h3 className="font-hennypenny text-white   font-bold text-3xl">Unleash the Power of Heroes</h3>
                             <h1 className="   text-white text-4xl dragonFont ">Explore Avengers, Transformers, and Star Wars Toys</h1>
-                            <button className="btn btn-outline btn-warning">Travel Guide</button>
+
 
 
                         </div>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide1" className="btn btn-circle">❮</a>
-                        <a href="#slide3" className="btn btn-circle">❯</a>
+                        <a href="#slide1" className="btn btn-circle border-b-2    shadow-red-500 shadow-2xl border-red-500">❮</a>
+                        <a href="#slide3" className="btn btn-circle border-b-2    shadow-red-500 shadow-2xl border-red-500">❯</a>
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
@@ -56,8 +55,8 @@ const Banner = () => {
                     </div>
 
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                        <a href="#slide2" className="btn btn-circle">❮</a>
-                        <a href="#slide1" className="btn btn-circle">❯</a>
+                        <a href="#slide2" className="btn btn-circle border-b-2    shadow-red-500 shadow-2xl border-red-500">❮</a>
+                        <a href="#slide1" className="btn btn-circle border-b-2    shadow-red-500 shadow-2xl border-red-500">❯</a>
                     </div>
                 </div>
 
