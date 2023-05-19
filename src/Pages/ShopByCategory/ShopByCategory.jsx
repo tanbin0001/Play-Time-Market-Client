@@ -8,7 +8,7 @@ const ShopByCategory = () => {
     const [toysData, setToysData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/allToys')
+        fetch('https://play-time-market-server.vercel.app/allToys')
             .then(res => res.json())
             .then(data => setToysData(data))
 

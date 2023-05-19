@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import Spinner from '../../shared/Spinner/Spinner';
 
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
-    const url = `http://localhost:5000/myToys?seller_email=${user?.email}`;
+    useTitle('My Toys')
+    const url = `https://play-time-market-server.vercel.app/myToys?seller_email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -38,7 +40,7 @@ const MyToys = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/myToys/${id}`, {
+                fetch(`https://play-time-market-server.vercel.app/myToys/${id}`, {
                     method: 'DELETE',
 
                 })

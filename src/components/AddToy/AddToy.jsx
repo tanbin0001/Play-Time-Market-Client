@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
+
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
+    useTitle('Add Toy')
     const handleAddToy = event => {
         event.preventDefault();
 
@@ -24,7 +27,7 @@ const AddToy = () => {
 
 
         //send data to the server
-        fetch('http://localhost:5000/newToy', {
+        fetch('https://play-time-market-server.vercel.app/newToy', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

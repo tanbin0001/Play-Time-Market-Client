@@ -3,8 +3,10 @@ import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
 
 import { useParams } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ToyDetails = () => {
+    useTitle(' Toy Details')
     const [toysData, setToysData] = useState([]);
     const [singleToyData, setSingleToyData] = useState({});
     const { user } = useContext(AuthContext);
@@ -14,7 +16,7 @@ const ToyDetails = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('http://localhost:5000/allToys');
+            const response = await fetch('https://play-time-market-server.vercel.app/allToys');
             const data = await response.json();
             setToysData(data);
             console.log(data);

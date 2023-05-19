@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const SingleToyDetails = () => {
     const { id } = useParams();
     const [toy, setToy] = useState({});
-    console.log(id);
+    useTitle(' Toy Details')
+
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addNewToys/${id}`)
+        fetch(`https://play-time-market-server.vercel.app/addNewToys/${id}`)
             .then(res => res.json())
             .then(data => {
                 setToy(data)

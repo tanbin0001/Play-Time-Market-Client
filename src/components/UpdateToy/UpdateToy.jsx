@@ -2,14 +2,16 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 const UpdateToy = () => {
     const { user } = useContext(AuthContext);
     const [toy, setToy] = useState({ name: '' });
+    useTitle('Update Toy')
 
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/updateToy/${id}`)
+        fetch(`https://play-time-market-server.vercel.app/updateToy/${id}`)
             .then(res => res.json())
             .then(data => {
                 setToy(data)
@@ -38,7 +40,7 @@ const UpdateToy = () => {
 
 
         //send data to the server
-        fetch(`http://localhost:5000/updateToys/${id}`, {
+        fetch(`https://play-time-market-server.vercel.app/updateToys/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

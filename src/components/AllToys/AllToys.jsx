@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from '../../shared/Spinner/Spinner';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
     const [addedToys, setAddedToys] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
+    useTitle('All Toys')
 
 
 
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/addNewToys?limit=20&search=${searchQuery}`)
+        fetch(`https://play-time-market-server.vercel.app/addNewToys?limit=20&search=${searchQuery}`)
 
             .then(res => res.json())
             .then(data => {
@@ -28,7 +30,7 @@ const AllToys = () => {
         <div className=' mt-10 font-marcellus'>
             <div className='flex justify-center'>
                 <div className='text-center '>
-                    <h1 className='font-bold text-3xl mb-14 dragonFont  border-b-2    shadow-red-500 shadow-2xl border-red-500   '>All Toys Page</h1>
+                    <h1 className='font-bold text-3xl mb-14 dragonFont  border-b-2    shadow-red-500 shadow-2xl border-red-500  animate-pulse  '>All Toys Page</h1>
                     <div className="form-control my-5  ">
                         <input type="text"
 
