@@ -4,12 +4,14 @@ import { AuthContext } from '../../AuthProvider/AuthProviders';
 
 import { useParams } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
+import Rating from 'react-rating';
+import { FaStar, FaRegStar } from 'react-icons/fa';
+
 
 const ToyDetails = () => {
     useTitle(' Toy Details')
     const [toysData, setToysData] = useState([]);
     const [singleToyData, setSingleToyData] = useState({});
-    const { user } = useContext(AuthContext);
     const { name, price, rating, image, toy_description, seller_name, seller_email, available_quantity } = singleToyData;
     const { id } = useParams();
     console.log(id);
@@ -46,8 +48,16 @@ const ToyDetails = () => {
 
                 <div className="card-body  ">
                     <h2 className="card-title">Toy Name:  {name}</h2>
-                    <p><span className="font-bold">Price:</span>  {price}</p>
-                    <p><span className="font-bold">Rating:</span>  {rating}</p>
+                    <h2>
+                        <Rating
+                            placeholderRating={rating}
+                            readonly
+                            emptySymbol={<FaRegStar className='text-red-500'></FaRegStar>}
+                            placeholderSymbol={<FaStar className='text-red-500'></FaStar>}
+                            fullSymbol={<FaStar></FaStar>}
+                        />
+                        {rating} </h2>
+
 
                     <p>Seller Name: {seller_name}</p>
                     <p>Seller Email: {seller_email}</p>
@@ -60,7 +70,7 @@ const ToyDetails = () => {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 
