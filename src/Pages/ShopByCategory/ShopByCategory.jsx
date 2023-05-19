@@ -3,6 +3,9 @@ import { Tabs, Tab, TabPanel, TabList } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import Toy from "./Toy";
 import '../../App.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
 
 const ShopByCategory = () => {
     const [toysData, setToysData] = useState([]);
@@ -16,7 +19,15 @@ const ShopByCategory = () => {
     console.log(toysData);
 
     return (
-        <div className=" mb-10">
+        <div className=" mb-10"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+        >
             <div className=" mb-14">
                 <h1 className="text-center  font-bold text-3xl dragonFont  border-b-2  w-96 mx-auto shadow-red-500 shadow-2xl border-red-500  ">Shop By Category</h1>
                 <p className="text-center animate-pulse text-red-400 font-bold font-marcellus">Have a look at our toy categories</p>

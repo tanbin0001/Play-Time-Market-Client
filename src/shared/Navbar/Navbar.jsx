@@ -6,7 +6,9 @@ import { useContext } from "react";
 
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProviders";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -17,7 +19,15 @@ const Navbar = () => {
             .catch(error => console.error(error))
     }
     return (
-        <div className="navbar text-white bg-black font-bold  mb-5  font-marcellus   border border-blue-300 shadow-lg  shadow-blue-300">
+        <div className="navbar text-white bg-black font-bold  mb-5  font-marcellus   border border-blue-300 shadow-lg  shadow-blue-300"
+
+            data-aos="zoom-in-up"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+        >
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

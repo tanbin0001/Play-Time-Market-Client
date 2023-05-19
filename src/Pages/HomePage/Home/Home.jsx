@@ -15,7 +15,7 @@ const Home = () => {
         // Simulating an asynchronous operation
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000);
+        }, 1000);
     }, []);
 
     return (

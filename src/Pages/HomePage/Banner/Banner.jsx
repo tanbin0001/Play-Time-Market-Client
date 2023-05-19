@@ -1,5 +1,7 @@
 import React from 'react';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
 const Banner = () => {
     return (
         <div>
@@ -11,7 +13,14 @@ const Banner = () => {
                     <div className="absolute inset-0 bg-black opacity-60"></div>
 
                     <div className="  absolute flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                        <div className="text-center space-y-5 mb-10">
+                        <div className="text-center space-y-5 mb-10 "
+                            data-aos="zoom-in-up"
+                            data-aos-delay="50"
+                            data-aos-duration="1000"
+                            data-aos-easing="ease-in-out"
+                            data-aos-mirror="true"
+                            data-aos-once="false"
+                        >
 
                             <h3 className="font-hennypenny text-white   font-bold text-3xl">Fuel Your Adventured</h3>
                             <h1 className="   text-white text-4xl  dragonFont">Adventure Awaits: Find Your Favorite Action Toys Today</h1>

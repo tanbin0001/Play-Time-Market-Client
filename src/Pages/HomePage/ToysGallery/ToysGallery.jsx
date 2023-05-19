@@ -1,9 +1,19 @@
 import Marquee from "react-fast-marquee";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init()
 const ToysGallery = () => {
     return (
 
-        <div className='my-10 '>
+        <div className='my-10 '
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+        >
             <div className=" mb-14 ">
 
                 <h1 className='text-center  font-bold text-3xl dragonFont  border-b-2  w-96 mx-auto shadow-red-500 shadow-2xl border-red-500  '>Toys Gallery</h1>
@@ -14,23 +24,23 @@ const ToysGallery = () => {
                     {/* image 1 */}
 
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/c3f59s.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://files.catbox.moe/c3f59s.jpg" class=" w-80" />
                     </div>
                     {/* image 2 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/947f08b6-ce72-4e85-8736-a1db9baa9577" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/947f08b6-ce72-4e85-8736-a1db9baa9577" class=" w-80" />
                     </div>
                     {/* image 3 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/4a57ea72-6646-4e76-bc67-001305350ca1" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/4a57ea72-6646-4e76-bc67-001305350ca1" class=" w-80" />
                     </div>
                     {/* image 4 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/dbe991fd-9374-4ee7-bac6-e5f53aa4d1d3" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/dbe991fd-9374-4ee7-bac6-e5f53aa4d1d3" class=" w-80" />
                     </div>
                     {/* image 5 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/ejgb6r.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://files.catbox.moe/ejgb6r.jpg" class=" w-80" />
                     </div>
                     {/* image 6 */}
                     <div class="bg-gray-200">
