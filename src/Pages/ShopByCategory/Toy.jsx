@@ -19,7 +19,7 @@ const Toy = ({ toy }) => {
     const handleActionClick = () => {
         if (!user) {
             setTimeout(() => {
-                toast.error('Please Login First');
+                toast.error('You have to log in first to view details');
             }, 1000);
         }
     }

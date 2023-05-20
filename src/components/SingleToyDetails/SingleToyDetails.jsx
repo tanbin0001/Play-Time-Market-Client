@@ -18,6 +18,7 @@ const SingleToyDetails = () => {
     }, []);
     const { name, image, price, rating, seller_name, seller_email, subCategory, toy_description, available_quantity } = toy;
 
+
     return (
         <div className='mt-10'>
             <h1 className='my-5 text-center font-bold text-3xl dragonFont border-b-2    shadow-red-500 shadow-2xl border-red-500  w-52 mx-auto animate-pulse '> {name}</h1>
