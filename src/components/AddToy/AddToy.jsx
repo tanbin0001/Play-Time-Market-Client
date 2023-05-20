@@ -3,6 +3,9 @@ import { AuthContext } from '../../AuthProvider/AuthProviders';
 import Swal from 'sweetalert2';
 import useTitle from '../../hooks/useTitle';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
@@ -20,6 +23,11 @@ const AddToy = () => {
         const image = form.image.value;
         const toy_description = form.description.value;
         const subCategory = form.subCategory.value;
+
+        if (!name || !price || !seller_name || !seller_email || !rating || !available_quantity || !image || !toy_description || !subCategory) {
+            toast.error('Please provide all the info');
+            return;
+        }
 
         const newToy = {
             name, price, toy_description, image, seller_email, seller_name, rating, available_quantity, subCategory
@@ -43,7 +51,7 @@ const AddToy = () => {
         Swal.fire({
 
             icon: 'success',
-            title: 'Your work has been saved',
+            title: 'Your toy has been added',
             showConfirmButton: false,
             timer: 1500
         })
@@ -132,6 +140,7 @@ const AddToy = () => {
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

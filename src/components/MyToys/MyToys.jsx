@@ -8,21 +8,27 @@ import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
+    const [loading, setLoading] = useState(true);
     const [myToys, setMyToys] = useState([]);
     useTitle('My Toys')
     const url = `https://play-time-market-server.vercel.app/myToys?seller_email=${user?.email}`;
 
     useEffect(() => {
+        setLoading(true);
         fetch(url)
             .then(res => res.json())
-            .then(data => setMyToys(data))
+            .then(data => {
+                setMyToys(data)
+                setLoading(false);
+
+            })
 
     }, [url, myToys]);
+
     if (myToys.length === 0) {
-        return (
-            <Spinner></Spinner>
-        );
+        return <p className="text-center mt-8 text-lg">No toys found.</p>;
     }
+
     const handleDelete = id => {
         Swal.fire({
             imageUrl: 'https://68.media.tumblr.com/b3e482dc5046a497ad526a423e26c4e3/tumblr_otmbl0ffWh1ud1moyo1_500.gif',
