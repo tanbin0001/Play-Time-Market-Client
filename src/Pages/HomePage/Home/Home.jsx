@@ -7,6 +7,7 @@ import ShopByCategory from '../../ShopByCategory/ShopByCategory';
 import Spinner from '../../../shared/Spinner/Spinner';
 import useTitle from '../../../hooks/useTitle';
 import AwesomeToys from '../AwesomeToys/AwesomeToys';
+import Footer from '../../../shared/Footer/Footer';
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
     useTitle('Home')
@@ -26,8 +27,9 @@ const Home = () => {
                 <>
                     <Banner />
                     <ToysGallery />
-                    <AwesomeToys />
                     <ShopByCategory />
+                    <AwesomeToys />
+                    <Footer></Footer>
                 </>
             )}
         </div>

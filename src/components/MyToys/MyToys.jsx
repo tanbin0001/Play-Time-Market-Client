@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
 import { Link } from 'react-router-dom';
-import Spinner from '../../shared/Spinner/Spinner';
-
 import Swal from 'sweetalert2';
 import useTitle from '../../hooks/useTitle';
+import Footer from '../../shared/Footer/Footer';
+
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -110,6 +110,7 @@ const MyToys = () => {
                     </tbody>
                 </table>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

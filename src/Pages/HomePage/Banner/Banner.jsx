@@ -3,13 +3,23 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init()
 const Banner = () => {
+
+
     return (
         <div>
 
 
             <div className="carousel    h-screen w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="https://files.catbox.moe/ad4mpb.jpg" className="w-full  " />
+                    <img
+                        data-aos="zoom-in"
+                        data-aos-delay="50"
+                        data-aos-duration="2000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-mirror="true"
+                        data-aos-once="true"
+
+                        src="https://files.catbox.moe/ad4mpb.jpg" className="w-full  " />
                     <div className="absolute inset-0 bg-black opacity-60"></div>
 
                     <div className="  absolute flex justify-center items-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">

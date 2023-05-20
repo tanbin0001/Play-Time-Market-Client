@@ -89,6 +89,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Spinner from '../../shared/Spinner/Spinner';
 import useTitle from '../../hooks/useTitle';
+import Footer from '../../shared/Footer/Footer';
 
 const AllToys = () => {
     const [addedToys, setAddedToys] = useState([]);
@@ -183,6 +184,7 @@ const AllToys = () => {
                     </tbody>
                 </table>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -10,12 +10,12 @@ const Toy = ({ toy }) => {
     return (
         <div>
 
-            <div className="card card-compact w-72  bg-base-100 rounded-none     border border-blue-300 shadow-lg animate-pulse shadow-blue-300">
+            <div className="card card-compact w-72  bg-base-100 rounded-none     border border-blue-500 shadow-lg animate-pulse shadow-blue-300">
                 <figure><img className="h-80" src={image} /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
-                    <p>Price: ${price}</p>
-                    <p>Rating:  <Rating
+                    <p> <span className="font-bold"> Price:</span> ${price}</p>
+                    <p> <span className="font-bold"> Rating:</span>  <Rating
                         placeholderRating={rating}
                         readonly
                         emptySymbol={<FaRegStar className='text-red-500'></FaRegStar>}

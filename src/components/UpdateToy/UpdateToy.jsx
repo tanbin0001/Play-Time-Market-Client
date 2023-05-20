@@ -3,6 +3,9 @@ import { useParams } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProviders';
 import Swal from 'sweetalert2';
 import useTitle from '../../hooks/useTitle';
+import Footer from '../../shared/Footer/Footer';
+
+
 
 const UpdateToy = () => {
     const { user } = useContext(AuthContext);
@@ -66,7 +69,7 @@ const UpdateToy = () => {
     return (
         <div>
             <div>
-                <div className="hero min-h-screen bg-base-200">
+                <div className="hero min-h-screen bg-base-200       pb-10">
                     <div className="hero-content flex-col  ">
                         <div className="text-center ">
                             < h1 className='font-bold   text-3xl mb-14 dragonFont  border-b-2 w-[300px] mx-auto text-center  animate-pulse  shadow-red-500 shadow-2xl border-red-500   '>Update toys</h1>
@@ -148,6 +151,7 @@ const UpdateToy = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

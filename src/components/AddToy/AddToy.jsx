@@ -5,6 +5,7 @@ import useTitle from '../../hooks/useTitle';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from '../../shared/Footer/Footer';
 
 
 const AddToy = () => {
@@ -60,7 +61,7 @@ const AddToy = () => {
     return (
         <div>
             <div>
-                <div className="hero min-h-screen bg-base-200 ">
+                <div className="hero min-h-screen bg-base-200 pb-10 ">
                     <div className="hero-content flex-col  ">
                         <div className="text-center ">
                             <h1 className='font-bold   text-3xl mb-14 dragonFont  border-b-2 w-[300px] mx-auto text-center  animate-pulse  shadow-red-500 shadow-2xl border-red-500   '>Add toys</h1>
@@ -141,6 +142,7 @@ const AddToy = () => {
                 </div>
             </div>
             <ToastContainer></ToastContainer>
+            <Footer></Footer>
         </div>
     );
 };
