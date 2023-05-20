@@ -24,31 +24,31 @@ const ToysGallery = () => {
                     {/* image 1 */}
 
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/c3f59s.jpg" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/1e142c02-d72c-4ab1-8259-5783d5d7c064" class=" w-80" />
                     </div>
                     {/* image 2 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/947f08b6-ce72-4e85-8736-a1db9baa9577" class=" w-80" />
+                        <img src=" https://image.lexica.art/full_jpg/13904d69-045e-4429-95ba-df244c2b30c0" class=" w-80" />
                     </div>
                     {/* image 3 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/4a57ea72-6646-4e76-bc67-001305350ca1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/2bea18c0-73cf-41ac-906e-ae6fbf4d90ce" class=" w-80" />
                     </div>
                     {/* image 4 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/dbe991fd-9374-4ee7-bac6-e5f53aa4d1d3" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/5ff0cd86-7aba-4e0a-83b9-9c932419285c" class=" w-80" />
                     </div>
                     {/* image 5 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/ejgb6r.jpg" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/600e9ded-ec0f-47ba-88f5-0de659adca9d" class=" w-80" />
                     </div>
                     {/* image 6 */}
                     <div class="bg-gray-200">
-                        <img src="https://image.lexica.art/full_jpg/b229cc14-2b54-4f97-b7bd-9fe6aa623067" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/4e4fa757-087f-47f4-8b8f-8cfa398eca68" alt="Toy 1" class=" w-80" />
                     </div>
                     {/* image 7 */}
                     <div class="bg-gray-200">
-                        <img src="https://files.catbox.moe/wl2e2d.jpg" alt="Toy 1" class=" w-80" />
+                        <img src="https://image.lexica.art/full_jpg/27ae3ba8-83d0-4067-9887-7a864e3dcf75" alt="Toy 1" class=" w-80" />
                     </div>
                     {/* image 8 */}
                     <div class="bg-gray-200">
