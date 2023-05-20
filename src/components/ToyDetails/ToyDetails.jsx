@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState, useContext } from 'react';
-import { AuthContext } from '../../AuthProvider/AuthProviders';
+
 
 import { useParams } from 'react-router-dom';
 import useTitle from '../../hooks/useTitle';
@@ -8,13 +8,17 @@ import Rating from 'react-rating';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 
 
+
 const ToyDetails = () => {
+
     useTitle(' Toy Details')
     const [toysData, setToysData] = useState([]);
     const [singleToyData, setSingleToyData] = useState({});
     const { name, price, rating, image, toy_description, seller_name, seller_email, available_quantity } = singleToyData;
     const { id } = useParams();
-    console.log(id);
+
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -73,7 +77,8 @@ const ToyDetails = () => {
                 </div>
 
             </div>
-        </div >
+
+        </div>
     );
 };
 

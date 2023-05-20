@@ -1,14 +1,17 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Tabs, Tab, TabPanel, TabList } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import Toy from "./Toy";
 import '../../App.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 AOS.init()
 
 const ShopByCategory = () => {
     const [toysData, setToysData] = useState([]);
+
+
 
     useEffect(() => {
         fetch('https://play-time-market-server.vercel.app/allToys')
@@ -60,6 +63,7 @@ const ShopByCategory = () => {
                     </TabPanel>
                 ))}
             </Tabs>
+
         </div>
     );
 };

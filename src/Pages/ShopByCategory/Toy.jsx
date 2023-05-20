@@ -1,12 +1,28 @@
 import Rating from "react-rating";
-import { Link } from "react-router-dom";
+import { Link, unstable_HistoryRouter } from "react-router-dom";
 import { FaStar, FaRegStar } from 'react-icons/fa';
-const Toy = ({ toy }) => {
 
+import { toast, ToastContainer } from "react-toastify";
+
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProviders";
+
+
+
+const Toy = ({ toy }) => {
+    const { user } = useContext(AuthContext);
     const { id, image, name, price, rating } = toy;
+
     // console.log(_id);
 
 
+    const handleActionClick = () => {
+        if (!user) {
+            setTimeout(() => {
+                toast.error('Please Login First');
+            }, 1000);
+        }
+    }
     return (
         <div>
 
@@ -25,11 +41,12 @@ const Toy = ({ toy }) => {
                         {rating}</p>
                     <div className="card-actions justify-end">
                         <Link to={`/toyDetails/${id}`}>
-                            <button className="btn    border border-blue-300 shadow-md  shadow-blue-300">View Details</button>
+                            <button onClick={handleActionClick} className="btn    border border-blue-300 shadow-md h  shadow-blue-300">View Details</button>
                         </Link>
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

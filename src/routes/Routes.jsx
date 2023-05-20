@@ -11,6 +11,7 @@ import SingleToyDetails from "../components/SingleToyDetails/SingleToyDetails";
 import MyToys from "../components/MyToys/MyToys";
 import UpdateToy from "../components/UpdateToy/UpdateToy";
 import ErrorPage from "../ErrorPage/ErrorPage";
+import Blogs from "../Blogs/Blogs";
 
 
 export const router = createBrowserRouter([
@@ -56,6 +57,11 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            }
+            ,
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>
             }
         ]
     },
