@@ -32,7 +32,7 @@ const ShopByCategory = () => {
             data-aos-once="false"
         >
             <div className=" mb-14">
-                <h1 className="text-center  font-bold text-3xl dragonFont  border-b-2  w-96 mx-auto shadow-red-500 shadow-2xl border-red-500  ">Shop By Category</h1>
+                <h1 className="text-center  font-bold text-3xl dragonFont  border-b-2  lg:w-96 w-80 mx-auto shadow-red-500 shadow-2xl border-red-500  ">Shop By Category</h1>
                 <p className="text-center animate-pulse text-red-400 font-bold font-marcellus">Have a look at our toy categories</p>
             </div>
             <Tabs className=''>

@@ -20,20 +20,20 @@ const AwesomeToys = () => {
         <div className="my-20"
 
         >
-            <h1 className="text-center  font-bold text-3xl dragonFont  border-b-2   lg:w-[500px] mx-auto shadow-red-500 shadow-2xl border-red-500  ">Awesome Action World</h1>
+            <h1 className="text-center  font-bold text-3xl dragonFont  border-b-2    lg:w-[500px] w-80  mx-auto shadow-red-500 shadow-2xl border-red-500  ">Awesome Action World</h1>
 
             <div className="lg:flex    justify-between lg:mx-20"
                 data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-delay="90"
-                data-aos-duration="1000"
+                data-aos-duration="3000"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="false"
             >
-                <div>
+                <div className="mx-10">
                     <h1 className=" mt-10 font-bold text-3xl font-marcellus   ">Explore the awesome world </h1>
-                    <p>Welcome to our action toy website! We specialize in selling a wide range of action figures inspired by popular franchises such as Avengers, Justice League, Deadpool, and X-Men. Whether you're a collector or a fan looking to add some excitement to your collection, you'll find an extensive selection of high-quality action toys that bring your favorite characters to life. Explore our website and embark on a thrilling adventure with iconic heroes and villains. Unleash your imagination and relive epic battles with our action-packed toys. Shop now and let the excitement begin!
+                    <p className="">Welcome to our action toy website! We specialize in selling a wide range of action figures inspired by popular franchises such as Avengers, Justice League, Deadpool, and X-Men. Whether you're a collector or a fan looking to add some excitement to your collection, you'll find an extensive selection of high-quality action toys that bring your favorite characters to life. Explore our website and embark on a thrilling adventure with iconic heroes and villains. Unleash your imagination and relive epic battles with our action-packed toys. Shop now and let the excitement begin!
 
                     </p>
 
@@ -42,7 +42,7 @@ const AwesomeToys = () => {
                     data-aos="fade-up"
                     data-aos-offset="200"
                     data-aos-delay="50"
-                    data-aos-duration="1000"
+                    data-aos-duration="4000"
                     data-aos-easing="ease-in-out"
                     data-aos-mirror="true"
                     data-aos-once="false"
