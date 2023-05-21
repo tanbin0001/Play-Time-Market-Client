@@ -9,6 +9,7 @@ import useTitle from '../../../hooks/useTitle';
 import AwesomeToys from '../AwesomeToys/AwesomeToys';
 import Footer from '../../../shared/Footer/Footer';
 import NewsLetter from '../NewsLetter/NewsLetter';
+import KidsToy from '../kidsToy/KidsToy';
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
     useTitle('Home')
@@ -30,6 +31,7 @@ const Home = () => {
                     <ToysGallery />
                     <ShopByCategory />
                     <AwesomeToys />
+                    <KidsToy></KidsToy>
                     <NewsLetter></NewsLetter>
                     <Footer></Footer>
                 </>
