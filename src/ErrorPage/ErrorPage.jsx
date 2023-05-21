@@ -1,12 +1,11 @@
 import React from 'react';
 import './ErrorPage.css'
+import { Link } from 'react-router-dom';
 
 
 const ErrorPage = () => {
-    const handleGoBack = () => {
-        window.history.back();
-    };
-
+   
+   
     return (
         <div>
 
@@ -25,7 +24,9 @@ const ErrorPage = () => {
 
             </div>
             <div className=' flex justify-center -mt-20'>
-                <button className='btn border border-blue-300 shadow-md  shadow-blue-300 ' onClick={handleGoBack}>Go Back</button>
+                <Link to='/'>
+                    <button className='btn border border-blue-300 shadow-md  shadow-blue-300 '>Go Back</button>
+                </Link>
             </div>s
         </div >
     );
